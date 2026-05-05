@@ -1,0 +1,21 @@
+# 代码质量巡检规则配置
+style:
+  max_line_length: 120
+  func_name_pattern: "^[a-z_][a-z0-9_]*$"
+
+complexity:
+  max_cyclomatic: 10
+
+security:
+  sensitive_keywords:
+    - password
+    - secret
+    - token
+    - api_key
+    - access_key
+  risk_patterns:
+    - "execute.*\\+.*"
+    - "eval\\(.*\\)"
+
+duplicate:
+  enable: true
