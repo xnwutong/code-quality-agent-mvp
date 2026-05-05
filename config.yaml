@@ -1,0 +1,25 @@
+# Code Quality Agent — default configuration
+
+style:
+  enabled: true
+  max_line_length: 79
+  ignore_codes: []          # e.g. ["E501", "W503"]
+  check_naming: true        # enforce PEP-8 naming conventions
+
+security:
+  enabled: true
+  check_hardcoded_secrets: true
+  check_sql_injection: true
+
+complexity:
+  enabled: true
+  max_complexity: 10        # functions with CC > this threshold are flagged
+
+duplicates:
+  enabled: true
+  min_lines: 6              # minimum block size to consider as a duplicate
+  min_duplicate_count: 2   # must appear at least this many times
+
+report:
+  color: true               # use ANSI color codes in terminal output
+  show_summary: true        # print a summary section at the end
